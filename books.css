@@ -1,0 +1,53 @@
+.books-morebooks{
+    font-family: brother-1816-printed;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.2em;
+    font-size: 23px;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: 0px;
+    margin: 1em 0 .5em;
+    color: #332f29;
+}
+
+.books-recom a {
+    font-weight: bold;
+    color: #92b1c4;
+    font-family: baskerville-urw;
+    font-style: normal;
+    line-height: 1.4em;
+    font-size: 16px;
+    text-transform: none;
+    text-decoration: none;
+    
+}
+
+/* footer 영역 관련 */
+
+.footer-line {
+    border: none;
+    color: #bbb;
+    background-color: #bbb;
+    height: 1px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.footer-dot{
+    color: black;
+}
+
+.footer-dot a {
+    text-decoration: none;
+    color: #92b1c4;
+}
+
+@media screen and (max-width:48rem){
+    .footer-dot{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        text-align: center;
+        display: block;
+    }
+}
