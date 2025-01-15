@@ -23,6 +23,53 @@
     
 }
 
+.image-container{
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 550;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .image-container:hover .overlay {
+        opacity: 0 !important; /* 모바일에서는 hover 시 텍스트가 나타나지 않도록 설정 */
+    }
+    .image-container {
+        pointer-events: auto; /* 모바일에서 hover 이벤트를 비활성화 */
+    }
+    .overlay {
+        opacity: 0; /* 모바일에서 처음부터 overlay가 보이지 않도록 설정 */
+    }
+}
+
+
+
 /* footer 영역 관련 */
 
 .footer-line {
@@ -50,4 +97,17 @@
         text-align: center;
         display: block;
     }
+}
+/* footer 영역 관련 */
+
+/* 책 상세소개 */
+.buy-copy{
+    font-weight: bold;
+    color: #92b1c4;
+    font-family: baskerville-urw;
+    font-style: normal;
+    line-height: 1.4em;
+    font-size: 16px;
+    text-transform: none;
+    text-decoration: none;
 }
