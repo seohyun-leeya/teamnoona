@@ -69,6 +69,54 @@
 }
 
 
+/* 책 상세소개 */
+.book-font{
+    color: #92b1c4;
+    text-decoration: none;
+}
+
+.book-italic{
+    font-style: italic;
+}
+
+.buy-copy{
+    font-weight: bold;
+    color: #92b1c4;
+    font-family: baskerville-urw;
+    font-style: normal;
+    line-height: 1.4em;
+    font-size: 16px;
+    text-transform: none;
+    text-decoration: none;
+}
+
+.book-mobileimg{
+    order: 0;
+}
+
+.book-mobiletext{
+    order: 1;
+}
+
+.book-mobileback{
+    order: 2;
+}
+
+@media screen and (max-width: 48rem){
+    .book-mobileimg{
+        order: 1;
+    }
+    
+    .book-mobiletext{
+        order: 0;
+    }
+    
+    .book-mobileback{
+        order: 2;
+    }
+}
+
+
 
 /* footer 영역 관련 */
 
@@ -99,15 +147,3 @@
     }
 }
 /* footer 영역 관련 */
-
-/* 책 상세소개 */
-.buy-copy{
-    font-weight: bold;
-    color: #92b1c4;
-    font-family: baskerville-urw;
-    font-style: normal;
-    line-height: 1.4em;
-    font-size: 16px;
-    text-transform: none;
-    text-decoration: none;
-}
