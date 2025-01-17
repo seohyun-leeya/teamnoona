@@ -136,6 +136,7 @@
 .footer-dot a {
     text-decoration: none;
     color: #92b1c4;
+    font-family: Noto sans mono;
 }
 
 @media screen and (max-width:48rem){
@@ -147,3 +148,138 @@
     }
 }
 /* footer 영역 관련 */
+
+/* 하단 고정 쿠키 배너영역 */
+.main-cookies-banner-area{
+    padding: 0;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 93%;
+    display: none;
+}
+.main-cookies-info-area{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    min-height: 100px;
+    padding: 14px 15px;
+}
+.main-cookies-info-area>h4{
+    align-self: center;
+    justify-self: flex-start;
+}
+.main-cookies-area-button{
+    padding: 10px 20px;
+    border-radius: 0;
+    margin-left: 20px;
+}
+/* 메인 컨테이너 영역 */
+.main-container-area{
+    padding: 45px;
+}
+/* ----------------------------------------------------네브영역---------------------------------------------------- */
+ /*------------------- 네브바 폰트-------------------------------------- */
+/* 구글 폰트 Noto sans mono - navbar menu ---main page에 맞게 수정함 */
+.noto-sans-mono-nav-item {
+    font-family: "Noto Sans Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 2px;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  /*------------------- 네브바 폰트-------------------------------------- */
+
+/* 네브바 영역 */
+.main-nav-area{
+    display: flex;
+    justify-content: space-between;
+}
+.main-logo-img{
+    width: 310px;
+}
+.main-nav-item-area{
+    display: flex;
+    width: 399.275px;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-nav-item-area>a{
+    text-decoration: none;
+    color: #181716;
+    font-size: 16px;
+    line-height: 24px; 
+}
+.main-nav-item-area>a:hover{
+    color: #92b1c4; /* 기본형 네브바 메뉴 호버기능 추가 */
+}
+/* 반응형 타입 네브바 */
+.reaction-type-menu {
+    position: relative;
+    padding: 0;
+    display: none;
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+.reaction-type-logo{
+    object-fit: inherit;
+    width: 100%;
+}
+#menu-button{
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    margin-top: 0;
+    padding-top: 0;
+    cursor: pointer;
+}
+/* 기본 상태에서 메뉴 숨기기 */
+.reaction-type-menu-item {
+    display: flex; /* flex는 유지 */
+    flex-direction: column;
+    gap: 10px;
+    max-height: 0; /* 높이를 0으로 설정 */
+    overflow: hidden; /* 넘치는 내용 숨기기 */
+    transition: max-height 0.3s ease, padding 0.3s ease; /* 부드러운 애니메이션 */
+    padding: 0; /* 초기 패딩 제거 */
+  }
+  
+.reaction-type-menu-item>a{
+    text-decoration: none;
+    padding-bottom: 20px;
+    color: #181716;
+}
+.reaction-type-menu-item.active {
+    max-height: 300px; /* 메뉴가 열릴 때의 최대 높이 (적절히 설정) */
+    padding: 10px 0; /* 메뉴가 열릴 때 패딩 추가 */
+  }
+
+  @media (max-width:995px) {
+        .main-nav-area{
+            position: relative;
+            padding-bottom: 50px;
+        }
+        .main-nav-item-area{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    @media (max-width:772px){
+        .main-nav-area{
+            display: none;
+        }
+        .main-container-area{
+            padding-top: 0;
+        }
+        .reaction-type-menu{
+            display: flex;
+        } 
+    }
+    
+/* ----------------------------------------------------네브영역---------------------------------------------------- */
